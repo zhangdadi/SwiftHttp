@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09A77CB519DE52B80022F997 /* HDService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A77CB419DE52B80022F997 /* HDService.framework */; };
-		09A77CB719DE52C30022F997 /* HDNetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A77CB619DE52C30022F997 /* HDNetworkKit.framework */; };
+		0989407B19EF8F45009BC662 /* HDNetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0989407919EF8F45009BC662 /* HDNetworkKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		0989407C19EF8F45009BC662 /* HDService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0989407A19EF8F45009BC662 /* HDService.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		0989407D19EF8FCD009BC662 /* HDNetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0989407919EF8F45009BC662 /* HDNetworkKit.framework */; };
+		0989407E19EF8FCD009BC662 /* HDNetworkKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0989407919EF8F45009BC662 /* HDNetworkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0989407F19EF8FCE009BC662 /* HDService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0989407A19EF8F45009BC662 /* HDService.framework */; };
+		0989408019EF8FCE009BC662 /* HDService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0989407A19EF8F45009BC662 /* HDService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		09D81B3319D9ACAE00DFAFF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D81B3219D9ACAE00DFAFF6 /* AppDelegate.swift */; };
 		09D81B3619D9ACAE00DFAFF6 /* HDPhone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09D81B3419D9ACAE00DFAFF6 /* HDPhone.xcdatamodeld */; };
 		09D81B3819D9ACAE00DFAFF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D81B3719D9ACAE00DFAFF6 /* ViewController.swift */; };
@@ -28,9 +32,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0989408119EF8FCE009BC662 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0989408019EF8FCE009BC662 /* HDService.framework in Embed Frameworks */,
+				0989407E19EF8FCD009BC662 /* HDNetworkKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		09A77CB419DE52B80022F997 /* HDService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HDService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		09A77CB619DE52C30022F997 /* HDNetworkKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HDNetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0989407919EF8F45009BC662 /* HDNetworkKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HDNetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0989407A19EF8F45009BC662 /* HDService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HDService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D81B2D19D9ACAE00DFAFF6 /* HDPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HDPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D81B3119D9ACAE00DFAFF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09D81B3219D9ACAE00DFAFF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,8 +68,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09A77CB719DE52C30022F997 /* HDNetworkKit.framework in Frameworks */,
-				09A77CB519DE52B80022F997 /* HDService.framework in Frameworks */,
+				0989407F19EF8FCE009BC662 /* HDService.framework in Frameworks */,
+				0989407B19EF8F45009BC662 /* HDNetworkKit.framework in Frameworks */,
+				0989407C19EF8F45009BC662 /* HDService.framework in Frameworks */,
+				0989407D19EF8FCD009BC662 /* HDNetworkKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,8 +88,8 @@
 		09D81B2419D9ACAE00DFAFF6 = {
 			isa = PBXGroup;
 			children = (
-				09A77CB619DE52C30022F997 /* HDNetworkKit.framework */,
-				09A77CB419DE52B80022F997 /* HDService.framework */,
+				0989407919EF8F45009BC662 /* HDNetworkKit.framework */,
+				0989407A19EF8F45009BC662 /* HDService.framework */,
 				09D81B2F19D9ACAE00DFAFF6 /* HDPhone */,
 				09D81B4819D9ACAE00DFAFF6 /* HDPhoneTests */,
 				09D81B2E19D9ACAE00DFAFF6 /* Products */,
@@ -133,6 +154,7 @@
 				09D81B2919D9ACAE00DFAFF6 /* Sources */,
 				09D81B2A19D9ACAE00DFAFF6 /* Frameworks */,
 				09D81B2B19D9ACAE00DFAFF6 /* Resources */,
+				0989408119EF8FCE009BC662 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -351,6 +373,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Demo-hklxuuefjjxxyseznfgwkkipwvlo/Build/Products/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Demo-bmxmlsfswkhxmnfrrdcvieylpouc/Build/Products/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = HDPhone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -365,6 +388,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Demo-hklxuuefjjxxyseznfgwkkipwvlo/Build/Products/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Demo-bmxmlsfswkhxmnfrrdcvieylpouc/Build/Products/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = HDPhone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

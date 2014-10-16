@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		099EEC3319DEAE9300E30209 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099EEC3219DEAE9300E30209 /* SwiftyJSON.swift */; };
 		09D81ACD19D9A7CB00DFAFF6 /* HDNetworkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D81ACC19D9A7CB00DFAFF6 /* HDNetworkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09D81AD719D9A7CB00DFAFF6 /* HDNetworkKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D81AD619D9A7CB00DFAFF6 /* HDNetworkKitTests.swift */; };
 		09D81AED19D9A7FB00DFAFF6 /* HDStackXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D81AE219D9A7FB00DFAFF6 /* HDStackXML.swift */; };
 		09D81AEE19D9A7FB00DFAFF6 /* ZParserXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D81AE319D9A7FB00DFAFF6 /* ZParserXML.swift */; };
 		09D81AEF19D9A7FB00DFAFF6 /* HDNetDataControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D81AE519D9A7FB00DFAFF6 /* HDNetDataControl.swift */; };
@@ -26,9 +25,6 @@
 		09D81AC719D9A7CB00DFAFF6 /* HDNetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HDNetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D81ACB19D9A7CB00DFAFF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09D81ACC19D9A7CB00DFAFF6 /* HDNetworkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDNetworkKit.h; sourceTree = "<group>"; };
-		09D81AD219D9A7CB00DFAFF6 /* HDNetworkKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HDNetworkKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		09D81AD519D9A7CB00DFAFF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09D81AD619D9A7CB00DFAFF6 /* HDNetworkKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDNetworkKitTests.swift; sourceTree = "<group>"; };
 		09D81AE219D9A7FB00DFAFF6 /* HDStackXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDStackXML.swift; sourceTree = "<group>"; };
 		09D81AE319D9A7FB00DFAFF6 /* ZParserXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZParserXML.swift; sourceTree = "<group>"; };
 		09D81AE519D9A7FB00DFAFF6 /* HDNetDataControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDNetDataControl.swift; sourceTree = "<group>"; };
@@ -48,13 +44,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		09D81ACF19D9A7CB00DFAFF6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -62,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				09D81AC919D9A7CB00DFAFF6 /* HDNetworkKit */,
-				09D81AD319D9A7CB00DFAFF6 /* HDNetworkKitTests */,
 				09D81AC819D9A7CB00DFAFF6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				09D81AC719D9A7CB00DFAFF6 /* HDNetworkKit.framework */,
-				09D81AD219D9A7CB00DFAFF6 /* HDNetworkKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,23 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				09D81ACB19D9A7CB00DFAFF6 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		09D81AD319D9A7CB00DFAFF6 /* HDNetworkKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				09D81AD619D9A7CB00DFAFF6 /* HDNetworkKitTests.swift */,
-				09D81AD419D9A7CB00DFAFF6 /* Supporting Files */,
-			);
-			path = HDNetworkKitTests;
-			sourceTree = "<group>";
-		};
-		09D81AD419D9A7CB00DFAFF6 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				09D81AD519D9A7CB00DFAFF6 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -184,23 +154,6 @@
 			productReference = 09D81AC719D9A7CB00DFAFF6 /* HDNetworkKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		09D81AD119D9A7CB00DFAFF6 /* HDNetworkKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 09D81ADD19D9A7CB00DFAFF6 /* Build configuration list for PBXNativeTarget "HDNetworkKitTests" */;
-			buildPhases = (
-				09D81ACE19D9A7CB00DFAFF6 /* Sources */,
-				09D81ACF19D9A7CB00DFAFF6 /* Frameworks */,
-				09D81AD019D9A7CB00DFAFF6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = HDNetworkKitTests;
-			productName = HDNetworkKitTests;
-			productReference = 09D81AD219D9A7CB00DFAFF6 /* HDNetworkKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -211,9 +164,6 @@
 				ORGANIZATIONNAME = "张达棣";
 				TargetAttributes = {
 					09D81AC619D9A7CB00DFAFF6 = {
-						CreatedOnToolsVersion = 6.0.1;
-					};
-					09D81AD119D9A7CB00DFAFF6 = {
 						CreatedOnToolsVersion = 6.0.1;
 					};
 				};
@@ -231,20 +181,12 @@
 			projectRoot = "";
 			targets = (
 				09D81AC619D9A7CB00DFAFF6 /* HDNetworkKit */,
-				09D81AD119D9A7CB00DFAFF6 /* HDNetworkKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		09D81AC519D9A7CB00DFAFF6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09D81AD019D9A7CB00DFAFF6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -268,14 +210,6 @@
 				09D81AEE19D9A7FB00DFAFF6 /* ZParserXML.swift in Sources */,
 				09D81AF119D9A7FB00DFAFF6 /* HDNetDataThread.swift in Sources */,
 				09D81AF519D9A7FB00DFAFF6 /* HDNetActivityIndicator.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09D81ACE19D9A7CB00DFAFF6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				09D81AD719D9A7CB00DFAFF6 /* HDNetworkKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,36 +331,6 @@
 			};
 			name = Release;
 		};
-		09D81ADE19D9A7CB00DFAFF6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = HDNetworkKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		09D81ADF19D9A7CB00DFAFF6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = HDNetworkKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -444,15 +348,6 @@
 			buildConfigurations = (
 				09D81ADB19D9A7CB00DFAFF6 /* Debug */,
 				09D81ADC19D9A7CB00DFAFF6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		09D81ADD19D9A7CB00DFAFF6 /* Build configuration list for PBXNativeTarget "HDNetworkKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				09D81ADE19D9A7CB00DFAFF6 /* Debug */,
-				09D81ADF19D9A7CB00DFAFF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

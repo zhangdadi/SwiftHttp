@@ -265,6 +265,22 @@ public class HDNetHTTPRequest: HDNetQueuedRequest, NSURLConnectionDataDelegate
         _doCompleted(error)
     }
     
+    //https
+    public func connection(connection: NSURLConnection, canAuthenticateAgainstProtectionSpace protectionSpace: NSURLProtectionSpace) -> Bool {
+        return protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust
+    }
+    
+    public func connection(connection: NSURLConnection, didReceiveAuthenticationChallenge challenge: NSURLAuthenticationChallenge) {
+        if challenge.previousFailureCount == 0 {
+            var credential = NSURLCredential(trust: challenge.protectionSpace.serverTrust)
+            challenge.sender.useCredential(credential, forAuthenticationChallenge: challenge)
+        } else {
+            challenge.sender.cancelAuthenticationChallenge(challenge)
+        }
+    }
+    
+    //==========
+    
     //下载完成
     func _doCompleted(error: NSError!)
     {

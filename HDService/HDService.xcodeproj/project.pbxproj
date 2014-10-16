@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		099EEC3519DEB69900E30209 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099EEC3419DEB69900E30209 /* Nodes.swift */; };
 		09D81B0819D9A9FD00DFAFF6 /* HDService.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D81B0719D9A9FD00DFAFF6 /* HDService.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09D81B1219D9A9FD00DFAFF6 /* HDServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D81B1119D9A9FD00DFAFF6 /* HDServiceTests.swift */; };
 		09D81B2119D9AA3400DFAFF6 /* HDCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D81B1C19D9AA3400DFAFF6 /* HDCService.swift */; };
 		09D81B2219D9AA3400DFAFF6 /* DCDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D81B1E19D9AA3400DFAFF6 /* DCDataModel.swift */; };
 		09D81B2319D9AA3400DFAFF6 /* CarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D81B2019D9AA3400DFAFF6 /* CarList.swift */; };
@@ -20,9 +19,6 @@
 		09D81B0219D9A9FD00DFAFF6 /* HDService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HDService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D81B0619D9A9FD00DFAFF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09D81B0719D9A9FD00DFAFF6 /* HDService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDService.h; sourceTree = "<group>"; };
-		09D81B0D19D9A9FD00DFAFF6 /* HDServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HDServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		09D81B1019D9A9FD00DFAFF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09D81B1119D9A9FD00DFAFF6 /* HDServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDServiceTests.swift; sourceTree = "<group>"; };
 		09D81B1C19D9AA3400DFAFF6 /* HDCService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDCService.swift; sourceTree = "<group>"; };
 		09D81B1E19D9AA3400DFAFF6 /* DCDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCDataModel.swift; sourceTree = "<group>"; };
 		09D81B2019D9AA3400DFAFF6 /* CarList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarList.swift; sourceTree = "<group>"; };
@@ -36,13 +32,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		09D81B0A19D9A9FD00DFAFF6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -50,7 +39,6 @@
 			isa = PBXGroup;
 			children = (
 				09D81B0419D9A9FD00DFAFF6 /* HDService */,
-				09D81B0E19D9A9FD00DFAFF6 /* HDServiceTests */,
 				09D81B0319D9A9FD00DFAFF6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				09D81B0219D9A9FD00DFAFF6 /* HDService.framework */,
-				09D81B0D19D9A9FD00DFAFF6 /* HDServiceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,7 +57,7 @@
 				09D81B0719D9A9FD00DFAFF6 /* HDService.h */,
 				09D81B1B19D9AA3400DFAFF6 /* Lib */,
 				09D81B1D19D9AA3400DFAFF6 /* Model */,
-				09D81B1F19D9AA3400DFAFF6 /* user */,
+				09D81B1F19D9AA3400DFAFF6 /* user - 用户接口 */,
 				09D81B0519D9A9FD00DFAFF6 /* Supporting Files */,
 			);
 			path = HDService;
@@ -80,23 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				09D81B0619D9A9FD00DFAFF6 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		09D81B0E19D9A9FD00DFAFF6 /* HDServiceTests */ = {
-			isa = PBXGroup;
-			children = (
-				09D81B1119D9A9FD00DFAFF6 /* HDServiceTests.swift */,
-				09D81B0F19D9A9FD00DFAFF6 /* Supporting Files */,
-			);
-			path = HDServiceTests;
-			sourceTree = "<group>";
-		};
-		09D81B0F19D9A9FD00DFAFF6 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				09D81B1019D9A9FD00DFAFF6 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -117,12 +87,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		09D81B1F19D9AA3400DFAFF6 /* user */ = {
+		09D81B1F19D9AA3400DFAFF6 /* user - 用户接口 */ = {
 			isa = PBXGroup;
 			children = (
 				09D81B2019D9AA3400DFAFF6 /* CarList.swift */,
 				099EEC3419DEB69900E30209 /* Nodes.swift */,
 			);
+			name = "user - 用户接口";
 			path = user;
 			sourceTree = "<group>";
 		};
@@ -158,23 +129,6 @@
 			productReference = 09D81B0219D9A9FD00DFAFF6 /* HDService.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		09D81B0C19D9A9FD00DFAFF6 /* HDServiceTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 09D81B1819D9A9FD00DFAFF6 /* Build configuration list for PBXNativeTarget "HDServiceTests" */;
-			buildPhases = (
-				09D81B0919D9A9FD00DFAFF6 /* Sources */,
-				09D81B0A19D9A9FD00DFAFF6 /* Frameworks */,
-				09D81B0B19D9A9FD00DFAFF6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = HDServiceTests;
-			productName = HDServiceTests;
-			productReference = 09D81B0D19D9A9FD00DFAFF6 /* HDServiceTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -185,9 +139,6 @@
 				ORGANIZATIONNAME = "张达棣";
 				TargetAttributes = {
 					09D81B0119D9A9FD00DFAFF6 = {
-						CreatedOnToolsVersion = 6.0.1;
-					};
-					09D81B0C19D9A9FD00DFAFF6 = {
 						CreatedOnToolsVersion = 6.0.1;
 					};
 				};
@@ -205,20 +156,12 @@
 			projectRoot = "";
 			targets = (
 				09D81B0119D9A9FD00DFAFF6 /* HDService */,
-				09D81B0C19D9A9FD00DFAFF6 /* HDServiceTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		09D81B0019D9A9FD00DFAFF6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09D81B0B19D9A9FD00DFAFF6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -236,14 +179,6 @@
 				09D81B2219D9AA3400DFAFF6 /* DCDataModel.swift in Sources */,
 				09D81B2119D9AA3400DFAFF6 /* HDCService.swift in Sources */,
 				099EEC3519DEB69900E30209 /* Nodes.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09D81B0919D9A9FD00DFAFF6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				09D81B1219D9A9FD00DFAFF6 /* HDServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,36 +300,6 @@
 			};
 			name = Release;
 		};
-		09D81B1919D9A9FD00DFAFF6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = HDServiceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		09D81B1A19D9A9FD00DFAFF6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = HDServiceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -412,15 +317,6 @@
 			buildConfigurations = (
 				09D81B1619D9A9FD00DFAFF6 /* Debug */,
 				09D81B1719D9A9FD00DFAFF6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		09D81B1819D9A9FD00DFAFF6 /* Build configuration list for PBXNativeTarget "HDServiceTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				09D81B1919D9A9FD00DFAFF6 /* Debug */,
-				09D81B1A19D9A9FD00DFAFF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -26,6 +26,8 @@ class ViewController: UIViewController, HDNetCtrlDelegate {
     }
     
     @IBAction func infoButtonClick(sender: AnyObject) {
+        println("节点数＝\(car.data?.listArray?.count) || 节点id＝\(car.data?.listArray?[0].mID)")
+        
         infoCtrl.param.mID = car.data?.listArray?[0].mID
         infoCtrl.refresh()
     }

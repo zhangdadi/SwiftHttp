@@ -34,7 +34,7 @@ public class DCDataCtrl_nodes: DCDataControl {
 */
         
         //get请求
-        let urlParam = String("nodes/show.json?id=\(param.mID!)")
+        let urlParam = String("nodes/show.json?id=\(param.mID?)")
         autoRequest(urlSuffix: urlParam)
     }
     
