@@ -32,9 +32,10 @@ public class DCDataCtrl_nodes: DCDataControl {
         let muParam: [String: HDNetHTTPMutipartDataFormItem] = ["id": HDNetHTTPMutipartDataFormItem.item(int: param.mID)]
         autoRequest(urlSuffix: "nodes/show.json", mutiPart: muParam)
 */
-        
+
         //get请求
         let urlParam = String("nodes/show.json?id=\(param.mID?)")
+       
         autoRequest(urlSuffix: urlParam)
     }
     

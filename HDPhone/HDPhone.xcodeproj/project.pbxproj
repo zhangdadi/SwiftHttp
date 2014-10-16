@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0989407B19EF8F45009BC662 /* HDNetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0989407919EF8F45009BC662 /* HDNetworkKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		0989407C19EF8F45009BC662 /* HDService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0989407A19EF8F45009BC662 /* HDService.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		0989407D19EF8FCD009BC662 /* HDNetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0989407919EF8F45009BC662 /* HDNetworkKit.framework */; };
 		0989407E19EF8FCD009BC662 /* HDNetworkKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0989407919EF8F45009BC662 /* HDNetworkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0989407F19EF8FCE009BC662 /* HDService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0989407A19EF8F45009BC662 /* HDService.framework */; };
 		0989408019EF8FCE009BC662 /* HDService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0989407A19EF8F45009BC662 /* HDService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		09D81B3319D9ACAE00DFAFF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D81B3219D9ACAE00DFAFF6 /* AppDelegate.swift */; };
 		09D81B3619D9ACAE00DFAFF6 /* HDPhone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09D81B3419D9ACAE00DFAFF6 /* HDPhone.xcdatamodeld */; };
@@ -68,8 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0989407F19EF8FCE009BC662 /* HDService.framework in Frameworks */,
-				0989407B19EF8F45009BC662 /* HDNetworkKit.framework in Frameworks */,
 				0989407C19EF8F45009BC662 /* HDService.framework in Frameworks */,
 				0989407D19EF8FCD009BC662 /* HDNetworkKit.framework in Frameworks */,
 			);
