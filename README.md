@@ -1,4 +1,6 @@
 #HDNetworkKit-swift
+用三层架构把界面层、服务层和网络层比较彻底的区分开来，大大的降低大模块之间的耦合度，有关网络数据之间的逻辑处理都放到服务层上，界面层请求数据唯一要做的事就是组织参数，发起请求，显示结果就OK了，如下图所示：
+![1](http://zhangdadi.github.io/image/HDNetworkKit/2.png)
 
 使用方法
 
