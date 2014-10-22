@@ -3,7 +3,7 @@
 
 
 ![2](http://zhangdadi.github.io/image/HDNetworkKit/2.png)
-![1](http://zhangdadi.github.io/image/HDNetworkKit/1.png)
+![1](http://zhangdadi.github.io/image/HDNetworkKit/1.jpg)
 
 
 使用方法
