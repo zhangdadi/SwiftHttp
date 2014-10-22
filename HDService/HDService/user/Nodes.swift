@@ -37,6 +37,7 @@ public class DCDataCtrl_nodes: DCDataControl {
         let urlParam = String("nodes/show.json?id=\(param.mID?)")
        
         autoRequest(urlSuffix: urlParam)
+        
     }
     
     //解析数据
