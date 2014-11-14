@@ -10,14 +10,35 @@ import UIKit
 import HDNetwork
 
 class HDViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let paramDict = ["22": "33"]
-        HDNetHTTPRequestManager().GET("http://www.hao123.com", parameters: nil, completion: {
+        //POST请求
+        HDNetHTTPRequestManager().POST("http://www.v2ex.com/api/nodes/all.json", parameters: nil, completion: {
             (data: NSData?, error: NSError?) -> Void in
-            println(data)
+            if error != nil {
+                println("请求all失败")
+                return
+            }
+
+            println("请求all成功")
+            var json = JSON(data: data!, options: nil, error: nil)
+            let mid = json[0]["id"].integerValue
+            
+            //GET请求
+            //参数
+            let paramDict = ["id": HDNetHTTPItem(value: mid!)]
+            HDNetHTTPRequestManager().GET("http://www.v2ex.com/api/nodes/show.json", parameters: paramDict, completion: {
+                (data: NSData?, error: NSError?) -> Void in
+                if error != nil {
+                   println("请求show.json失败")
+                } else {
+                    json = JSON(data: data!, options: nil, error: nil)
+                    println(json)
+                    var titel = json["title"].stringValue
+                    println("请求show.json成功,标题为=\(titel)")
+                }
+            })
         })
 
     }

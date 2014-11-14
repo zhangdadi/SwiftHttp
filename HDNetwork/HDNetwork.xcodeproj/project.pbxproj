@@ -132,11 +132,11 @@
 		095461DF1A1607680069EC32 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				095461E31A1607680069EC32 /* HDNetRequest.swift */,
+				095461E41A1607680069EC32 /* HDNetRequestQueue.swift */,
 				095461E01A1607680069EC32 /* HDNetDataThread.swift */,
 				095461E11A1607680069EC32 /* HDNetHTTPRequest.swift */,
 				095461E21A1607680069EC32 /* HDNetHTTPRequestManager.swift */,
-				095461E31A1607680069EC32 /* HDNetRequest.swift */,
-				095461E41A1607680069EC32 /* HDNetRequestQueue.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
