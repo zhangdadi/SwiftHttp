@@ -70,8 +70,8 @@ struct DataThreadInitSingleton{
 /**
 *  全局队列
 */
-public struct QueueSingleton {
-    static public func shareInstance() -> HDNetRequestQueue {
+struct QueueSingleton {
+    static func shareInstance() -> HDNetRequestQueue {
         struct Singleton{
             static var predicate: dispatch_once_t = 0
             static var instance: HDNetRequestQueue? = nil
@@ -143,85 +143,85 @@ class HDNetDataThread: NSThread {
 /**
 *  多点回调
 */
-class HDNetCallNode: NSObject {
-    weak var _data: HDNetCtrlDelegate?
-    var _next: HDNetCallNode?
-    
-    func push(data: HDNetCtrlDelegate) {
-        pop(data)
-        var temp = self
-        while temp._next != nil {
-            temp = temp._next!
-        }
-        var newNode = HDNetCallNode()
-        newNode._data = data
-        temp._next = newNode
-    }
-    
-    func pop(index:Int) {
-        var lastTemp: HDNetCallNode? = self
-        var temp: HDNetCallNode? = self._next
-        var i = 0
-        while lastTemp?._next != nil && i <= index {
-            if i == index {
-                lastTemp?._next = temp?._next
-                temp?._data = nil
-                temp = nil
-            }
-            lastTemp = lastTemp?._next
-            temp = temp?._next
-            ++i
-        }
-    }
-    
-    func pop(data: HDNetCtrlDelegate) {
-        var lastTemp: HDNetCallNode? = self
-        var temp: HDNetCallNode? = self._next
-        
-        while lastTemp?._next != nil {
-            if data === temp?._data {
-                lastTemp?._next = temp?._next
-                temp?._data = nil
-                temp = nil
-            }
-            lastTemp = lastTemp?._next
-            temp = temp?._next
-        }
-    }
-    
-    func callUpdate(sender: HDNetDataModel) {
-        var temp = self
-        var i = 0
-        while temp._next != nil {
-            temp = temp._next!
-            if temp._data != nil {
-                temp._data?.netCtrlUpdate?(sender)
-            } else {
-               pop(i)
-            }
-            ++i
-        }
-    }
-    
-    func callProgress(sender: HDNetDataModel) {
-        var temp = self
-        while temp._next != nil {
-            temp = temp._next!
-            temp._data?.netCtrlProgress?(sender)
-        }
-    }
-    
-    func _find(data:HDNetCtrlDelegate) -> Bool {
-        var temp = self
-        while temp._next != nil {
-            temp = temp._next!
-            if temp._data === data {
-                return true
-            }
-        }
-        return false
-    }
-}
+//class HDNetCallNode: NSObject {
+//    weak var _data: HDNetCtrlDelegate?
+//    var _next: HDNetCallNode?
+//    
+//    func push(data: HDNetCtrlDelegate) {
+//        pop(data)
+//        var temp = self
+//        while temp._next != nil {
+//            temp = temp._next!
+//        }
+//        var newNode = HDNetCallNode()
+//        newNode._data = data
+//        temp._next = newNode
+//    }
+//    
+//    func pop(index:Int) {
+//        var lastTemp: HDNetCallNode? = self
+//        var temp: HDNetCallNode? = self._next
+//        var i = 0
+//        while lastTemp?._next != nil && i <= index {
+//            if i == index {
+//                lastTemp?._next = temp?._next
+//                temp?._data = nil
+//                temp = nil
+//            }
+//            lastTemp = lastTemp?._next
+//            temp = temp?._next
+//            ++i
+//        }
+//    }
+//    
+//    func pop(data: HDNetCtrlDelegate) {
+//        var lastTemp: HDNetCallNode? = self
+//        var temp: HDNetCallNode? = self._next
+//        
+//        while lastTemp?._next != nil {
+//            if data === temp?._data {
+//                lastTemp?._next = temp?._next
+//                temp?._data = nil
+//                temp = nil
+//            }
+//            lastTemp = lastTemp?._next
+//            temp = temp?._next
+//        }
+//    }
+//    
+//    func callUpdate(sender: HDNetDataModel) {
+//        var temp = self
+//        var i = 0
+//        while temp._next != nil {
+//            temp = temp._next!
+//            if temp._data != nil {
+//                temp._data?.netCtrlUpdate?(sender)
+//            } else {
+//               pop(i)
+//            }
+//            ++i
+//        }
+//    }
+//    
+//    func callProgress(sender: HDNetDataModel) {
+//        var temp = self
+//        while temp._next != nil {
+//            temp = temp._next!
+//            temp._data?.netCtrlProgress?(sender)
+//        }
+//    }
+//    
+//    func _find(data:HDNetCtrlDelegate) -> Bool {
+//        var temp = self
+//        while temp._next != nil {
+//            temp = temp._next!
+//            if temp._data === data {
+//                return true
+//            }
+//        }
+//        return false
+//    }
+//}
 
 
 

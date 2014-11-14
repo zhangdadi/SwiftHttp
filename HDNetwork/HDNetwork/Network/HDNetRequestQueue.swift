@@ -31,9 +31,9 @@ import UIKit
 /**
 *  带队列的网络请求
 */
-public class HDNetQueuedRequest: HDNetRequest
+class HDNetQueuedRequest: HDNetRequest
 {
-    public var queue: HDNetRequestQueue? //队列
+    var queue: HDNetRequestQueue? //队列
     var _fProcessingQueue: HDNetRequestQueue? // 正在排队中的队列
     final override var isInProgress: Bool
     {
@@ -117,7 +117,7 @@ public class HDNetQueuedRequest: HDNetRequest
 /**
 *  队列
 */
-public class HDNetRequestQueue: NSObject
+class HDNetRequestQueue: NSObject
 {
     var _requestQueue = [HDNetQueuedRequest]()
     var _requestCount: UInt = 0

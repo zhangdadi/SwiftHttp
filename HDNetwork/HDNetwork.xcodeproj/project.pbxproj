@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		095461971A1607240069EC32 /* HDNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 095461961A1607240069EC32 /* HDNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		095461A11A1607240069EC32 /* HDNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095461A01A1607240069EC32 /* HDNetworkTests.swift */; };
+		095461E71A1607680069EC32 /* HDStackXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095461DC1A1607680069EC32 /* HDStackXML.swift */; };
+		095461E81A1607680069EC32 /* ZParserXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095461DD1A1607680069EC32 /* ZParserXML.swift */; };
+		095461E91A1607680069EC32 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095461DE1A1607680069EC32 /* SwiftyJSON.swift */; };
+		095461EA1A1607680069EC32 /* HDNetDataThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095461E01A1607680069EC32 /* HDNetDataThread.swift */; };
+		095461EB1A1607680069EC32 /* HDNetHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095461E11A1607680069EC32 /* HDNetHTTPRequest.swift */; };
+		095461EC1A1607680069EC32 /* HDNetHTTPRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095461E21A1607680069EC32 /* HDNetHTTPRequestManager.swift */; };
+		095461ED1A1607680069EC32 /* HDNetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095461E31A1607680069EC32 /* HDNetRequest.swift */; };
+		095461EE1A1607680069EC32 /* HDNetRequestQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095461E41A1607680069EC32 /* HDNetRequestQueue.swift */; };
+		095461EF1A1607680069EC32 /* HDNetActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095461E61A1607680069EC32 /* HDNetActivityIndicator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		095461911A1607240069EC32 /* HDNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HDNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		095461951A1607240069EC32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		095461961A1607240069EC32 /* HDNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDNetwork.h; sourceTree = "<group>"; };
+		0954619C1A1607240069EC32 /* HDNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HDNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0954619F1A1607240069EC32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		095461A01A1607240069EC32 /* HDNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDNetworkTests.swift; sourceTree = "<group>"; };
+		095461DC1A1607680069EC32 /* HDStackXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDStackXML.swift; sourceTree = "<group>"; };
+		095461DD1A1607680069EC32 /* ZParserXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZParserXML.swift; sourceTree = "<group>"; };
+		095461DE1A1607680069EC32 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		095461E01A1607680069EC32 /* HDNetDataThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDNetDataThread.swift; sourceTree = "<group>"; };
+		095461E11A1607680069EC32 /* HDNetHTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDNetHTTPRequest.swift; sourceTree = "<group>"; };
+		095461E21A1607680069EC32 /* HDNetHTTPRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDNetHTTPRequestManager.swift; sourceTree = "<group>"; };
+		095461E31A1607680069EC32 /* HDNetRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDNetRequest.swift; sourceTree = "<group>"; };
+		095461E41A1607680069EC32 /* HDNetRequestQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDNetRequestQueue.swift; sourceTree = "<group>"; };
+		095461E61A1607680069EC32 /* HDNetActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDNetActivityIndicator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0954618D1A1607240069EC32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		095461991A1607240069EC32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		095461871A1607240069EC32 = {
+			isa = PBXGroup;
+			children = (
+				095461931A1607240069EC32 /* HDNetwork */,
+				0954619D1A1607240069EC32 /* HDNetworkTests */,
+				095461921A1607240069EC32 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		095461921A1607240069EC32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				095461911A1607240069EC32 /* HDNetwork.framework */,
+				0954619C1A1607240069EC32 /* HDNetworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		095461931A1607240069EC32 /* HDNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				095461DA1A1607680069EC32 /* Lib */,
+				095461DF1A1607680069EC32 /* Network */,
+				095461E51A1607680069EC32 /* UI */,
+				095461961A1607240069EC32 /* HDNetwork.h */,
+				095461941A1607240069EC32 /* Supporting Files */,
+			);
+			path = HDNetwork;
+			sourceTree = "<group>";
+		};
+		095461941A1607240069EC32 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				095461951A1607240069EC32 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0954619D1A1607240069EC32 /* HDNetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				095461A01A1607240069EC32 /* HDNetworkTests.swift */,
+				0954619E1A1607240069EC32 /* Supporting Files */,
+			);
+			path = HDNetworkTests;
+			sourceTree = "<group>";
+		};
+		0954619E1A1607240069EC32 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0954619F1A1607240069EC32 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		095461DA1A1607680069EC32 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				095461DB1A1607680069EC32 /* ParserXML */,
+				095461DE1A1607680069EC32 /* SwiftyJSON.swift */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		095461DB1A1607680069EC32 /* ParserXML */ = {
+			isa = PBXGroup;
+			children = (
+				095461DC1A1607680069EC32 /* HDStackXML.swift */,
+				095461DD1A1607680069EC32 /* ZParserXML.swift */,
+			);
+			path = ParserXML;
+			sourceTree = "<group>";
+		};
+		095461DF1A1607680069EC32 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				095461E01A1607680069EC32 /* HDNetDataThread.swift */,
+				095461E11A1607680069EC32 /* HDNetHTTPRequest.swift */,
+				095461E21A1607680069EC32 /* HDNetHTTPRequestManager.swift */,
+				095461E31A1607680069EC32 /* HDNetRequest.swift */,
+				095461E41A1607680069EC32 /* HDNetRequestQueue.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		095461E51A1607680069EC32 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				095461E61A1607680069EC32 /* HDNetActivityIndicator.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0954618E1A1607240069EC32 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				095461971A1607240069EC32 /* HDNetwork.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		095461901A1607240069EC32 /* HDNetwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 095461A41A1607240069EC32 /* Build configuration list for PBXNativeTarget "HDNetwork" */;
+			buildPhases = (
+				0954618C1A1607240069EC32 /* Sources */,
+				0954618D1A1607240069EC32 /* Frameworks */,
+				0954618E1A1607240069EC32 /* Headers */,
+				0954618F1A1607240069EC32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HDNetwork;
+			productName = HDNetwork;
+			productReference = 095461911A1607240069EC32 /* HDNetwork.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0954619B1A1607240069EC32 /* HDNetworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 095461A71A1607240069EC32 /* Build configuration list for PBXNativeTarget "HDNetworkTests" */;
+			buildPhases = (
+				095461981A1607240069EC32 /* Sources */,
+				095461991A1607240069EC32 /* Frameworks */,
+				0954619A1A1607240069EC32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HDNetworkTests;
+			productName = HDNetworkTests;
+			productReference = 0954619C1A1607240069EC32 /* HDNetworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		095461881A1607240069EC32 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "张达棣";
+				TargetAttributes = {
+					095461901A1607240069EC32 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					0954619B1A1607240069EC32 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 0954618B1A1607240069EC32 /* Build configuration list for PBXProject "HDNetwork" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 095461871A1607240069EC32;
+			productRefGroup = 095461921A1607240069EC32 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				095461901A1607240069EC32 /* HDNetwork */,
+				0954619B1A1607240069EC32 /* HDNetworkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0954618F1A1607240069EC32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0954619A1A1607240069EC32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0954618C1A1607240069EC32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				095461E91A1607680069EC32 /* SwiftyJSON.swift in Sources */,
+				095461EC1A1607680069EC32 /* HDNetHTTPRequestManager.swift in Sources */,
+				095461EA1A1607680069EC32 /* HDNetDataThread.swift in Sources */,
+				095461EE1A1607680069EC32 /* HDNetRequestQueue.swift in Sources */,
+				095461ED1A1607680069EC32 /* HDNetRequest.swift in Sources */,
+				095461EB1A1607680069EC32 /* HDNetHTTPRequest.swift in Sources */,
+				095461E71A1607680069EC32 /* HDStackXML.swift in Sources */,
+				095461E81A1607680069EC32 /* ZParserXML.swift in Sources */,
+				095461EF1A1607680069EC32 /* HDNetActivityIndicator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		095461981A1607240069EC32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				095461A11A1607240069EC32 /* HDNetworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		095461A21A1607240069EC32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		095461A31A1607240069EC32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		095461A51A1607240069EC32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HDNetwork/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		095461A61A1607240069EC32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HDNetwork/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		095461A81A1607240069EC32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HDNetworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		095461A91A1607240069EC32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HDNetworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0954618B1A1607240069EC32 /* Build configuration list for PBXProject "HDNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				095461A21A1607240069EC32 /* Debug */,
+				095461A31A1607240069EC32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		095461A41A1607240069EC32 /* Build configuration list for PBXNativeTarget "HDNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				095461A51A1607240069EC32 /* Debug */,
+				095461A61A1607240069EC32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		095461A71A1607240069EC32 /* Build configuration list for PBXNativeTarget "HDNetworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				095461A81A1607240069EC32 /* Debug */,
+				095461A91A1607240069EC32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 095461881A1607240069EC32 /* Project object */;
+}

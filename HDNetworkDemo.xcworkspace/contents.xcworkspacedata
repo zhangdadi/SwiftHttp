@@ -5,9 +5,6 @@
       location = "group:HDPhone/HDPhone.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:HDService/HDService.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:HDNetworkKit/HDNetworkKit.xcodeproj">
+      location = "group:HDNetwork/HDNetwork.xcodeproj">
    </FileRef>
 </Workspace>

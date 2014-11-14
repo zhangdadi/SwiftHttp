@@ -1,6 +1,6 @@
 //
-//  HDPhoneTests.swift
-//  HDPhoneTests
+//  HDNetworkTests.swift
+//  HDNetworkTests
 //
 //  Created by 张达棣 on 14-11-14.
 //  Copyright (c) 2014年 张达棣. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class HDPhoneTests: XCTestCase {
+class HDNetworkTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

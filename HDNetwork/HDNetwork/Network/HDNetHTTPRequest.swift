@@ -31,58 +31,48 @@ import UIKit
 /**
 *  HTTP POST 请求参数类
 */
-public class HDNetHTTPMutipartDataFormItem: NSObject {
+public class HDNetHTTPItem: NSObject {
     var fileName: String? //文件名
     var content: AnyObject? //数据内容,NSString 或 NSData
     var contentType: String? //数据类型
     
-    //+___________________________________________________
-    public class func item(#int: Int!) -> HDNetHTTPMutipartDataFormItem! {
-        var str: String = int.description;
-        return HDNetHTTPMutipartDataFormItem.item(str: str)
-    }
-    public class func item(#float: Float!) -> HDNetHTTPMutipartDataFormItem! {
-        var str: String = float.description;
-        return HDNetHTTPMutipartDataFormItem.item(str: str)
+    public init(value: NSObject) {
+        self.contentType = "text/plain"
+        self.content = value.description
     }
     
-    public class func item(#str: String!) -> HDNetHTTPMutipartDataFormItem! {
-        var item = HDNetHTTPMutipartDataFormItem()
-        item.contentType = "text/plain"
-        item.content = str
-        return item
+    public init(data: NSData) {
+        self.contentType = "application/octet-stream"
+        self.content = data
     }
     
-    public class func item(#data: NSData!) -> HDNetHTTPMutipartDataFormItem!  {
-        var item = HDNetHTTPMutipartDataFormItem()
-        item.contentType = "application/octet-stream"
-        item.content = data
-        return item
-    }
-    
-    public class func item(#data: NSData!, fileName: String!) -> HDNetHTTPMutipartDataFormItem!  {
-        var item = HDNetHTTPMutipartDataFormItem()
-        item.contentType = "application/octet-stream"
-        item.content = data
-        item.fileName = fileName
-        return item
+    public init(data: NSData, fileName: String) {
+        self.contentType = "application/octet-stream"
+        self.content = data
+        self.fileName = fileName
     }
 }
 
 //_______________________________________________________________________
 
 
+enum HDHTTPMethodType {
+    case GET
+    case POST
+}
+
 /**
 *  HTTP请求
 */
-public class HDNetHTTPRequest: HDNetQueuedRequest, NSURLConnectionDataDelegate
+class HDNetHTTPRequest: HDNetQueuedRequest, NSURLConnectionDataDelegate
 {
     //url
-    public var destURL: NSURL?
+    var destURL: NSURL!
     // POST multiple part 数据
-    public var multipartDict: [String: HDNetHTTPMutipartDataFormItem]?
+    var multipartDict: [String: HDNetHTTPItem]?
     //是否有缓存
-    public var cached: Bool = false
+    var cached: Bool = false
+    var methodType = HDHTTPMethodType.POST
     
     final override var expectedSize: Int {
     var len = 0
@@ -117,7 +107,7 @@ public class HDNetHTTPRequest: HDNetQueuedRequest, NSURLConnectionDataDelegate
     
     //+___________________________________________________
     
-    override public init()
+    override init()
     {
         _request.timeoutInterval = 25 //超时时间
         _request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData
@@ -145,8 +135,13 @@ public class HDNetHTTPRequest: HDNetQueuedRequest, NSURLConnectionDataDelegate
         _HTTPInProgress = true
         completedSize = 0
         
+        if methodType == HDHTTPMethodType.POST {
+            creatPOSTParam()
+        } else {
+            creatGETParam()
+        }
+        
         _request.URL = destURL
-        _prepareRequestContent()
         //建立连接
         _connection = NSURLConnection(request: _request, delegate: self, startImmediately: false)
         _connection.scheduleInRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
@@ -157,7 +152,7 @@ public class HDNetHTTPRequest: HDNetQueuedRequest, NSURLConnectionDataDelegate
         return true
     }
     
-    func _prepareRequestContent()
+    func creatPOSTParam()
     {
         if multipartDict == nil || multipartDict?.count == 0 {
             return
@@ -222,6 +217,24 @@ public class HDNetHTTPRequest: HDNetQueuedRequest, NSURLConnectionDataDelegate
         _request.HTTPMethod = "POST"
     }
     
+    func creatGETParam() {
+        if multipartDict == nil || multipartDict?.count == 0 {
+            return
+        }
+        
+        var urlStr = String(destURL.absoluteString!)
+        var isFirst = true
+        for (key, item) in multipartDict! {
+            if isFirst {
+                isFirst = false
+                urlStr += "?\(key)=\(item.content)"
+            } else {
+                urlStr += "&\(key)=\(item.content)"
+            }
+        }
+        destURL = NSURL(string: urlStr)
+    }
+    
     func connection(connection: NSURLConnection!, didReceiveResponse response: NSURLResponse!)
     {
         assert(_connection === connection, "NSURLConnection异常")
@@ -266,11 +279,11 @@ public class HDNetHTTPRequest: HDNetQueuedRequest, NSURLConnectionDataDelegate
     }
     
     //https
-    public func connection(connection: NSURLConnection, canAuthenticateAgainstProtectionSpace protectionSpace: NSURLProtectionSpace) -> Bool {
+    func connection(connection: NSURLConnection, canAuthenticateAgainstProtectionSpace protectionSpace: NSURLProtectionSpace) -> Bool {
         return protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust
     }
     
-    public func connection(connection: NSURLConnection, didReceiveAuthenticationChallenge challenge: NSURLAuthenticationChallenge) {
+    func connection(connection: NSURLConnection, didReceiveAuthenticationChallenge challenge: NSURLAuthenticationChallenge) {
         if challenge.previousFailureCount == 0 {
             var credential = NSURLCredential(trust: challenge.protectionSpace.serverTrust)
             challenge.sender.useCredential(credential, forAuthenticationChallenge: challenge)
