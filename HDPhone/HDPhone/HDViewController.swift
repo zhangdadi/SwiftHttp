@@ -12,6 +12,8 @@ import HDNetwork
 class HDViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    
 
         //POST请求
         HDNetHTTPRequestManager().POST("http://www.v2ex.com/api/nodes/all.json", parameters: nil, completion: {
