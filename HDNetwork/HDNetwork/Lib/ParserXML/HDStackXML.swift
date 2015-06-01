@@ -16,7 +16,7 @@ class HDStackXML: NSObject {
     *
     */
     func push(str: String?) {
-        if str == nil || str? == "" || str? == " " {
+        if str == nil || str == "" || str == " " {
             return
         }
         

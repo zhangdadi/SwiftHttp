@@ -192,10 +192,10 @@ class HDNetHTTPRequest: HDNetQueuedRequest, NSURLConnectionDataDelegate
             formBody.appendData(header.dataUsingEncoding(NSUTF8StringEncoding)!)
             //加入数据
             if item.content != nil && item.content!.isKindOfClass(NSData) {
-                var data = item.content as NSData
+                var data = item.content as! NSData
                 formBody.appendData(data)
             } else if item.content != nil {
-                var text = item.content as NSString
+                var text = item.content as! NSString
                 formBody.appendData(text.dataUsingEncoding(NSUTF8StringEncoding)!)
             }
         }
@@ -235,7 +235,7 @@ class HDNetHTTPRequest: HDNetQueuedRequest, NSURLConnectionDataDelegate
         destURL = NSURL(string: urlStr)
     }
     
-    func connection(connection: NSURLConnection!, didReceiveResponse response: NSURLResponse!)
+    func connection(connection: NSURLConnection, didReceiveResponse response: NSURLResponse)
     {
         assert(_connection === connection, "NSURLConnection异常")
         
@@ -250,7 +250,7 @@ class HDNetHTTPRequest: HDNetQueuedRequest, NSURLConnectionDataDelegate
         _downloadingData = NSMutableData(capacity: len)
     }
     
-    func connection(connection: NSURLConnection!, didReceiveData data: NSData!)
+    func connection(connection: NSURLConnection, didReceiveData data: NSData)
     {
         assert(_connection === connection, "NSURLConnection异常")
         
@@ -262,18 +262,18 @@ class HDNetHTTPRequest: HDNetQueuedRequest, NSURLConnectionDataDelegate
         delegate?.netRequestProgress?(self)
     }
     
-    func connectionDidFinishLoading(connection: NSURLConnection!)
+    func connectionDidFinishLoading(connection: NSURLConnection)
     {
         assert(_connection === connection, "connection异常")
         
         // 下载完成数据
-        responseData = _downloadingData?.copy() as NSData!
+        responseData = _downloadingData?.copy() as? NSData
         _downloadingData = nil
         
         _doCompleted(nil)
     }
     
-    func connection(connection: NSURLConnection!, didFailWithError error: NSError!)
+    func connection(connection: NSURLConnection, didFailWithError error: NSError)
     {
         _doCompleted(error)
     }

@@ -57,7 +57,7 @@ class HDNetRequest: NSObject
     //（网络请求回调）通知网络请求完毕
     func requestCompleted(error: NSError?)
     {
-        delegate?.netRequestCompletion?(sender: self, error: error?)
+        delegate?.netRequestCompletion?(sender: self, error: error)
     }
     
     //开始请求,子类调用请求应用此方法，而不要用queuedStart

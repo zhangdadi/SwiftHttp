@@ -11,7 +11,6 @@
 		095461A11A1607240069EC32 /* HDNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095461A01A1607240069EC32 /* HDNetworkTests.swift */; };
 		095461E71A1607680069EC32 /* HDStackXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095461DC1A1607680069EC32 /* HDStackXML.swift */; };
 		095461E81A1607680069EC32 /* ZParserXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095461DD1A1607680069EC32 /* ZParserXML.swift */; };
-		095461E91A1607680069EC32 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095461DE1A1607680069EC32 /* SwiftyJSON.swift */; };
 		095461EA1A1607680069EC32 /* HDNetDataThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095461E01A1607680069EC32 /* HDNetDataThread.swift */; };
 		095461EB1A1607680069EC32 /* HDNetHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095461E11A1607680069EC32 /* HDNetHTTPRequest.swift */; };
 		095461EC1A1607680069EC32 /* HDNetHTTPRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095461E21A1607680069EC32 /* HDNetHTTPRequestManager.swift */; };
@@ -29,7 +28,6 @@
 		095461A01A1607240069EC32 /* HDNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDNetworkTests.swift; sourceTree = "<group>"; };
 		095461DC1A1607680069EC32 /* HDStackXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDStackXML.swift; sourceTree = "<group>"; };
 		095461DD1A1607680069EC32 /* ZParserXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZParserXML.swift; sourceTree = "<group>"; };
-		095461DE1A1607680069EC32 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		095461E01A1607680069EC32 /* HDNetDataThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDNetDataThread.swift; sourceTree = "<group>"; };
 		095461E11A1607680069EC32 /* HDNetHTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDNetHTTPRequest.swift; sourceTree = "<group>"; };
 		095461E21A1607680069EC32 /* HDNetHTTPRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDNetHTTPRequestManager.swift; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				095461DB1A1607680069EC32 /* ParserXML */,
-				095461DE1A1607680069EC32 /* SwiftyJSON.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -255,7 +252,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				095461E91A1607680069EC32 /* SwiftyJSON.swift in Sources */,
 				095461EC1A1607680069EC32 /* HDNetHTTPRequestManager.swift in Sources */,
 				095461EA1A1607680069EC32 /* HDNetDataThread.swift in Sources */,
 				095461EE1A1607680069EC32 /* HDNetRequestQueue.swift in Sources */,

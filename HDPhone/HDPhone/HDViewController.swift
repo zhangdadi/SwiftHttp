@@ -13,37 +13,10 @@ class HDViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var imageData = NSData(contentsOfFile: "1.png")
-        let paramDict = ["image": HDNetHTTPItem(data: imageData, fileName: "imageName.png")]
-        //POST请求
-        HDNetHTTPRequestManager().POST("http://www.v2ex.com/api/nodes/all.json", parameters: paramDict, completion: {
-            (data: NSData?, error: NSError?) -> Void in
-            if error != nil {
-                println("上传图片失败")
-                return
-            } else {
-                println("上传图片成功")
-            }
-
-            println("请求all成功")
-            var json = JSON(data: data!, options: nil, error: nil)
-            let mid = json[0]["id"].integerValue
-            
-//            //GET请求
-//            //参数
-//            let paramDict = ["id": HDNetHTTPItem(value: mid!)]
-//            HDNetHTTPRequestManager().GET("http://www.v2ex.com/api/nodes/show.json", parameters: paramDict, completion: {
-//                (data: NSData?, error: NSError?) -> Void in
-//                if error != nil {
-//                   println("请求show.json失败")
-//                } else {
-//                    json = JSON(data: data!, options: nil, error: nil)
-//                    println(json)
-//                    var titel = json["title"].stringValue
-//                    println("请求show.json成功,标题为=\(titel)")
-//                }
-//            })
-        })
+        
+        HDNetHTTPRequestManager().GET("http://apitest.aidianhui.com/api/city/GetEnableCities", parameters: nil) { (data, error) -> Void in
+            println(data)
+        }
 
     }
 

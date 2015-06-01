@@ -44,7 +44,7 @@ struct DataThreadInitSingleton{
                 var len: UInt = 0
                 var ncpu: UInt = 0
                 len = UInt(sizeofValue(ncpu))
-                sysctlbyname("hw.ncpu", &ncpu, &len, nil, 0)
+//                sysctlbyname("hw.ncpu", &ncpu, &len, nil, 0)
                 
                 if ncpu <= 1 {
                     debugPrintln("network in main thread")
@@ -134,7 +134,7 @@ class HDNetDataThread: NSThread {
                 let p = _parmList.removeAtIndex(0);
             }
             
-            NSRunLoop.currentRunLoop().runMode(NSDefaultRunLoopMode, beforeDate: NSDate.distantFuture() as NSDate)
+            NSRunLoop.currentRunLoop().runMode(NSDefaultRunLoopMode, beforeDate: NSDate.distantFuture() as! NSDate)
         }
     }
 }
